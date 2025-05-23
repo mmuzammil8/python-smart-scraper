@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LinkedIn Scraper Tool</title>
+</head>
+<body>
+  <h2>LinkedIn Candidate Search</h2>
+  <form method="post">
+    <input type="text" name="keyword" placeholder="Search job titles..." required>
+    <button type="submit">Search</button>
+  </form>
+  <ul>
+    {% for row in results %}
+    <li><strong>{{ row.name }}</strong> — {{ row.title }} ({{ row.location }})</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
